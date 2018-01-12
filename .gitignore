@@ -10,3 +10,5 @@ test.tmp
 /uv-*
 /uv.h
 /*compressed-output.*
+.DS_Store
+**/.DS_Store
