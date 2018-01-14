@@ -53,7 +53,7 @@ externals.fetched:
 $(EXTERNALS)/pypy:
 	mkdir $(EXTERNALS); \
 	cd $(EXTERNALS); \
-	curl https://bitbucket.org/pypy/pypy/get/91db1a9.tar.bz2 >  pypy.tar.bz2; \
+	https://bitbucket.org/pypy/pypy/get/release-pypy2.7-v5.7.0.tar.bz2 >  pypy.tar.bz2; \
 	mkdir pypy; \
 	cd pypy; \
 	tar -jxf ../pypy.tar.bz2 --strip-components=1
@@ -71,6 +71,7 @@ run_interactive_stacklets:
 
 run_built_tests: pixie-vm
 	./pixie-vm run-tests.pxi
+	exit
 
 run_interpreted_tests: target.py
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) target.py run-tests.pxi
