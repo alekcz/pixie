@@ -63,7 +63,7 @@ run:
 
 
 run_interactive:
-	@PYTHONPATH=$(PYTHONPATH) $(PYTHON) target.pypyy
+	@PYTHONPATH=$(PYTHONPATH) $(PYTHON) target.py
 
 run_interactive_stacklets:
 	@PYTHONPATH=$(PYTHONPATH) $(PYTHON) target.py pixie/stacklets.pxi
