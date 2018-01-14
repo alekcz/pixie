@@ -70,8 +70,7 @@ run_interactive_stacklets:
 
 
 run_built_tests: pixie-vm
-	./pixie-vm run-tests.pxi
-	exit
+	./pixie-vm run-tests.pxi || (echo "tests failed $$?"; exit 1)
 
 run_interpreted_tests: target.py
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) target.py run-tests.pxi
