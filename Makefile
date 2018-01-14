@@ -63,7 +63,7 @@ run:
 
 
 run_interactive:
-	@PYTHONPATH=$(PYTHONPATH) $(PYTHON) target.py
+	@PYTHONPATH=$(PYTHONPATH) $(PYTHON) target.pypyy
 
 run_interactive_stacklets:
 	@PYTHONPATH=$(PYTHONPATH) $(PYTHON) target.py pixie/stacklets.pxi
@@ -71,6 +71,7 @@ run_interactive_stacklets:
 
 run_built_tests: pixie-vm
 	./pixie-vm run-tests.pxi
+	exit
 
 run_interpreted_tests: target.py
 	PYTHONPATH=$(PYTHONPATH) $(PYTHON) target.py run-tests.pxi
