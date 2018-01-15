@@ -10,7 +10,7 @@ script:
   - make PYTHON=python build
   - make compile_src
   - make compile_tests
-  - make run_built_tests
+  - ./pixie-vm run-tests.pxi || (echo "tests failed $$?"; exit 1)
 
 addons:
   apt:
